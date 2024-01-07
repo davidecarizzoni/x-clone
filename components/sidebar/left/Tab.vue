@@ -15,7 +15,7 @@ const activeClass = computed(() => active.value ? 'font-semibold':'')
 </script>
 
 <template>
-  <nuxt-link class="rounded-full flex items-center p-3 text-white" :class="[defaultTransition, activeClass]">
+  <nuxt-link class="rounded-full flex items-center justify-center p-3 text-white" :class="[defaultTransition, activeClass]">
     <div class="w-6 h-6">
       <font-awesome-icon :icon="icon"/>
     </div>
