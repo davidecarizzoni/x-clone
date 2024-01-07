@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { useVModel } from '@vueuse/core'
-import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
 const props = defineProps<{
-  modelValue: string
+  modelValue: string,
+  showClear?: boolean
 }>()
 const emit = defineEmits(['update:modelValue'])
 
@@ -16,11 +17,8 @@ const clear = () => {
 
 <template>
   <div class="text-input flex flex-row items-center relative">
-    <div class="prepend left-2 h-full flex-col justify-center items-center">
-      <font-awesome-icon
-        icon="fas fa-search"
-        class="cursor-pointer text-white/60"
-      />
+    <div class="prepend left-2 h-full flex-col justify-center items-center" v-if="$slots.prepend">
+      <slot name="prepend" />
     </div>
     <input
       v-model="data"
@@ -29,7 +27,7 @@ const clear = () => {
     />
     <div class="append absolute flex top-0 right-4 h-full flex-col justify-center items-center">
       <font-awesome-icon
-        v-if="!!data"
+        v-if="!!data && showClear"
         icon="fas fa-times"
         class="cursor-pointer text-white/80"
         @click="clear"
@@ -44,13 +42,7 @@ const clear = () => {
     @apply pl-4;
     @apply pr-2;
     @apply rounded-full;
-    @apply bg-slate-600/60;
+    @apply bg-slate-600/30;
     @apply text-white;
-  }
-  .append {
-
-  }
-  .prepend {
-
   }
 </style>

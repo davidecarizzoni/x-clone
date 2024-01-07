@@ -8,6 +8,7 @@ import Trends from "~/components/Trends.vue";
     <div class="sticky top-0">
       <div class="flex flex-col">
         <SearchBar />
+        <SubscribeToPremium />
         <WhoToFollow />
         <Trends />
       </div>

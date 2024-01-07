@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+body {
+  @apply text-white;
+}
+
+.title {
+  @apply text-xl font-extrabold;
+}
+
+.text {
+  @apply font-normal text-base text-left leading-5 mt-2;
+}
