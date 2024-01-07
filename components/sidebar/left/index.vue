@@ -5,17 +5,21 @@
 </script>
 
 <template>
-  <div class="hidden md:block xs:col-span-1 sm:col-span-2 md:col-span-3">
+  <div class="md:block xs:col-span-1 xl:col-span-2">
     <div class="sticky top-0">
       <div class="p-2 my-2 rounded-full" :class="[defaultTransition]">
-        <NuxtLink to="/">
+        <nuxt-link to="/">
           <div class="w-8 h-8">
             <Logo />
           </div>
-        </NuxtLink>
+        </nuxt-link>
       </div>
-      <div>
-        <font-awesome-icon icon="fas fa-home" class="text-white"/>
+      <div class="mt-2 space-y-1">
+        <sidebar-left-tab icon="fas fa-home" text="Home"/>
+        <sidebar-left-tab icon="fas fa-hashtag" text="Esplore"/>
+        <sidebar-left-tab icon="fas fa-bell" text="Notifications"/>
+        <sidebar-left-tab icon="fas fa-envelope" text="Bookmarks"/>
+        <sidebar-left-tab icon="fas fa-user" text="Users"/>
       </div>
     </div>
   </div>

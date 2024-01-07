@@ -6,9 +6,9 @@ const dark = ref(true)
   <div :class="{dark}">
     <div class="min-h-screen bg-white dark:bg-black">
       <div class="grid grid-cols-12 mx-auto sm:px-6 lg:max-w-7xl lg:px-8 lg:gap-5">
-        <SidebarLeft />
+        <sidebar-left />
         <div />
-        <SidebarRight />
+        <sidebar-right />
       </div>
     </div>
   </div>
