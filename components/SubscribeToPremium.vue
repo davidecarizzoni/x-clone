@@ -5,7 +5,7 @@ import XButton from "~/components/ui/XButton.vue";
 </script>
 
 <template>
-  <Card class="mt-2">
+  <Card class="mt-4">
     <div class="title">
       Subscribe to Premium
     </div>

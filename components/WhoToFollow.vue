@@ -6,7 +6,7 @@ import UserRow from "~/components/ui/UserRow.vue";
 </script>
 
 <template>
-  <Card class="mt-2">
+  <Card class="mt-4">
     <div class="title">
       Who to follow
     </div>
