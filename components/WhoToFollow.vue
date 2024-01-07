@@ -2,6 +2,7 @@
 
 import Card from "~/components/ui/Card.vue";
 import XLink from "~/components/ui/XLink.vue";
+import UserRow from "~/components/ui/UserRow.vue";
 </script>
 
 <template>
@@ -9,7 +10,12 @@ import XLink from "~/components/ui/XLink.vue";
     <div class="title">
       Who to follow
     </div>
-    <XLink text="Show more" />
+    <div class="space-y-4 my-4 w-full">
+      <UserRow />
+      <UserRow />
+      <UserRow />
+    </div>
+    <XLink text="Show more" class="mt-2"/>
   </Card>
 </template>
 

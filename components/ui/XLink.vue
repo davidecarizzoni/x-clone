@@ -5,7 +5,7 @@ defineProps<{
 </script>
 
 <template>
-  <nuxt-link to="/" class="text-sm text-blue-500">
+  <nuxt-link to="/" class="text-sm text-sky-500">
     {{text}}
   </nuxt-link>
 </template>
