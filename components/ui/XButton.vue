@@ -1,13 +1,15 @@
 <script setup lang="ts">
-defineProps<{
+const props = defineProps<{
   text: string;
-  type: 'primary' | 'white'
+  type: 'primary' | 'white',
+  disabled?: boolean,
+  btnClass?: string
 }>()
 
 </script>
 
 <template>
-  <button class="rounded-full bg-blue-500 px-3 py-2 font-bold" :class="[type]">
+  <button class="rounded-full bg-blue-500 font-bold" :class="[type, disabled && 'opacity-60']" :disabled="disabled">
     {{ text }}
   </button>
 </template>

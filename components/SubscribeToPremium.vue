@@ -13,7 +13,7 @@ import XButton from "~/components/ui/XButton.vue";
       Subscribe to unlock new features and if eligible, receive a share of ads revenue.
     </div>
     <div class="mt-3">
-      <XButton type="primary" text="Subscribe" />
+      <XButton type="primary" text="Subscribe" class="px-3 py-2"/>
     </div>
   </Card>
 </template>
