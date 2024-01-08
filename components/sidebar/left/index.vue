@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="hidden md:block xs:col-span-1 xl:col-span-2">
+  <div class="md:block xs:col-span-1 xl:col-span-2">
     <div class="sticky top-0">
       <div class="p-2 my-2 rounded-full" :class="[defaultTransition]">
         <nuxt-link to="/">
