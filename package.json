@@ -11,8 +11,8 @@
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.10.3",
+    "@types/lodash": "^4.14.202",
     "nuxt": "^3.9.0",
-    "nuxt-headlessui": "^1.1.5",
     "sass": "^1.69.7",
     "vue": "^3.4.5",
     "vue-router": "^4.2.5"
@@ -23,6 +23,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/vue-fontawesome": "^3.0.5",
+    "@headlessui/vue": "^1.7.17",
     "@vueuse/core": "^10.7.1"
   }
 }

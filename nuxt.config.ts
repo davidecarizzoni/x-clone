@@ -3,7 +3,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     '@nuxtjs/tailwindcss',
-    'nuxt-headlessui'
   ],
   css: ['@fortawesome/fontawesome-svg-core/styles.css'],
   app: {
@@ -11,7 +10,4 @@ export default defineNuxtConfig({
       title: 'X Clone'
     }
   },
-  headlessui: {
-    prefix: 'Headless'
-  }
 })
