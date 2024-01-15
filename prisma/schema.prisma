@@ -1,9 +1,11 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
+// npx prisma db push -> to update the database and create the indexes
+
 generator client {
   provider = "prisma-client-js"
-  previewFeatures = ["fieldReference"]
+  previewFeatures = []
 }
 
 datasource db {
@@ -17,8 +19,9 @@ model User {
 	email     String   @unique
 	name      String?
 	surname   String?
-	username  String?  @unique
+	username  String  @unique
 	password  String
 	createdAt DateTime @default(now())
 	updatedAt DateTime @updatedAt
+	profileImage String?
 }
