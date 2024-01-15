@@ -1,4 +1,5 @@
 import {createUser} from "~/server/db/users.js";
+import {userTransformer} from "~/server/transformers/user.js";
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)
@@ -36,6 +37,6 @@ export default defineEventHandler(async (event) => {
   })
 
   return {
-    user
+    user: userTransformer(user)
   }
 })
