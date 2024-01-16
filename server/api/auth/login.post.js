@@ -30,7 +30,7 @@ export default defineEventHandler(async (event) => {
   if (!hasSamePassword) {
     return sendError(event, createError({
       statusCode: 401,
-      statusMessage: 'Authentication failed'
+      statusMessage: 'Email or password are invalid'
     }))
   }
 
