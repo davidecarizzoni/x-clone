@@ -7,7 +7,7 @@ const search = ref("");
 
 <template>
   <div>
-    <TextInput v-model="search" show-clear>
+    <TextInput v-model="search" show-clear placeholder="Search">
       <template #prepend>
         <font-awesome-icon
           icon="fas fa-search"

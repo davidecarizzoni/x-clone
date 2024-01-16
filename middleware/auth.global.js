@@ -2,7 +2,7 @@ const whitelist = [
   '/login',
 ]
 
-const isLogged = true
+const isLogged = false
 export default defineNuxtRouteMiddleware((to, from) => {
   if (!isLogged) {
     if (whitelist.includes(to.path)) { return }

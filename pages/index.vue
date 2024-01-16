@@ -2,7 +2,7 @@
 import MainContent from "~/components/MainContent.vue";
 import RightSidebar from "~/components/RightSidebar.vue";
 
-const dark = ref(true)
+const dark = useState('dark', () => true)
 </script>
 
 <template>

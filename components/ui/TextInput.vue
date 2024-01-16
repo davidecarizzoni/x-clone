@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 const props = defineProps<{
   modelValue: string,
   showClear?: boolean
+  placeholder?: string
+  type?: string
 }>()
 const emit = defineEmits(['update:modelValue'])
 
@@ -22,7 +24,8 @@ const clear = () => {
     </div>
     <input
       v-model="data"
-      placeholder="Search"
+      :placeholder="placeholder"
+      :type="type"
       class="bg-transparent h-12 pl-2 w-full focus:outline-0"
     />
     <div class="append absolute flex top-0 right-4 h-full flex-col justify-center items-center">
@@ -32,6 +35,7 @@ const clear = () => {
         class="cursor-pointer text-white/80"
         @click="clear"
       />
+      <slot name="right"/>
     </div>
   </div>
 </template>
