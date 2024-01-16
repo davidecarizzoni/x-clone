@@ -34,7 +34,7 @@ export default defineEventHandler(async (event) => {
   }
 
   // generate token
-  const { accessToken, refreshToken } = generateTokens(user._id)
+  const { accessToken, refreshToken } = generateTokens(user)
 
   return {
     accessToken,
