@@ -7,8 +7,11 @@ export default defineNuxtConfig({
   css: ['@fortawesome/fontawesome-svg-core/styles.css'],
   app: {
     head: {
-      title: 'X Clone'
-    }
+      title: 'X Clone',
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.png'}
+      ]
+    },
   },
   runtimeConfig: {
     jwtAccessSecret: process.env.JWT_ACCESS_TOKEN_SECRET,
