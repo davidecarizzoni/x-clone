@@ -1,7 +1,8 @@
 import {findUserByEmail} from "~/server/db/users.js";
 import {userTransformer} from "~/server/transformers/user.js";
 import bcrypt from "bcrypt";
-import {generateTokens} from "~/server/utils/jwt.js";
+import {generateTokens, sendRefreshToken} from "~/server/utils/jwt.js";
+import {createRefreshToken} from "~/server/db/refreshTokens.js";
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event)
@@ -35,6 +36,15 @@ export default defineEventHandler(async (event) => {
 
   // generate token
   const { accessToken, refreshToken } = generateTokens(user)
+
+  // save refresh token
+  await createRefreshToken({
+    token: refreshToken,
+    userId: user?.id
+  })
+
+  // add http only cookie
+  sendRefreshToken(event, refreshToken)
 
   return {
     accessToken,

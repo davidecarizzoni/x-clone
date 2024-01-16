@@ -12,8 +12,16 @@ export const generateRefreshToken = (userId) => {
   })
 }
 
-export const generateTokens = ({ _id: userId }) => {
+export const generateTokens = ({ id: userId }) => {
   const accessToken = generateAccessToken(userId)
   const refreshToken = generateRefreshToken(userId)
   return { accessToken, refreshToken }
+}
+
+export const sendRefreshToken = (event, token) => {
+  console.debug({event})
+  setCookie(event, 'refresh_token', token, {
+    httpOnly: true,
+    sameSite: true
+  })
 }
